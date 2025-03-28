@@ -6,7 +6,7 @@ from apps.producto.models import Producto
 class ProductoSerializer(serializers.ModelSerializer):
     # Campo para escritura: se envía el id de la categoría
     categoria_id = serializers.PrimaryKeyRelatedField(
-        queryset=Categoria.objects.all(), write_only=True
+        queryset=Categoria.objects.all(), write_only=False
     )
     # Campo para lectura: se muestra la representación completa de la categoría
     categoria = CategoriaSerializer(source="categoria_id", read_only=True)
