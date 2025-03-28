@@ -12,6 +12,7 @@ class CajaDiariaSerializer(serializers.ModelSerializer):
         model = CajaDiaria
         fields = [
             'id',
+            'nombre',
             'fecha_apertura',
             'fecha_cierre',
             'saldo_inicial',
